@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Widget.AppCompat.Light.ListView.DropDown"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/field_label"
+        style="@style/TextAppearance.AppCompat.Widget.PopupMenu.Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="testing"
+        android:textColor="@color/md_purple_900" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/choice_select_button"
+        style="@style/Base.Widget.AppCompat.Button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_purple_900"
+        android:text="abc"
+        android:textColor="@color/md_white_1000">
+
+    </android.support.v7.widget.AppCompatButton>
+
+</LinearLayout>

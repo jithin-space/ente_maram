@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/md_white_1000">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:id="@+id/filter_text_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Design.TextInputLayout">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/filter_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/md_purple_900"
+            android:inputType="text"
+            android:maxLines="1">
+
+            <requestFocus />
+        </android.support.design.widget.TextInputEditText>
+
+
+    </android.support.design.widget.TextInputLayout>
+
+
+    <!--
+         NOTE: This listview must have @android:id/list for the listactivity
+         to find it.
+    -->
+    <ListView
+        android:id="@android:id/list"
+        style="@style/Base.Widget.AppCompat.ListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@color/md_white_1000"
+        android:fastScrollEnabled="true"
+        android:textFilterEnabled="true"
+        android:divider="@color/md_grey_200"
+        android:dividerHeight="1dp"></ListView>
+
+</LinearLayout>

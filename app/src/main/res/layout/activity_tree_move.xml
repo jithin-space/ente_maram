@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/moveable_marker_map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        class="com.google.android.gms.maps.MapFragment" />
+    <include
+        android:id="@+id/basemap_controls"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addTreeStep"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        layout="@layout/segmented_button" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="false"
+
+        android:background="@color/md_blue_grey_100"
+        android:visibility="visible">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:src="@drawable/ic_touch_app" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="Long Press to move tree into position. Then click update"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small" />
+
+        <Button
+            android:id="@+id/treeAddNext"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="5dp"
+            android:text="update"
+            android:onClick="submitTreeMove"
+            android:textColor="@color/md_white_1000" />
+    </LinearLayout>
+
+
+</RelativeLayout>

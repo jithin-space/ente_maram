@@ -1,0 +1,95 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/main_background_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/profile_activity_loggedin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <com.example.space.hkm.views.NotifyingScrollView
+            android:id="@+id/userFieldsScroll"
+            onScrollToBotton="addMoreEdits"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1.0">
+
+                <TextView
+                    android:id="@+id/profile_header"
+                    style="@style/user_profile_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="top"
+                    android:text="@string/user_profile_details" />
+
+                <LinearLayout
+                    android:id="@+id/profile_field_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp" />
+
+                <LinearLayout
+                    android:id="@+id/user_fields"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/logout"
+                        style="@style/profile_button_loggedin"
+                        android:layout_marginTop="20dp"
+                        android:text="@string/logoutButton" />
+
+                    <Button
+                        android:id="@+id/change_instance_loggedin"
+                        style="@style/profile_button_loggedin"
+                        android:text="@string/profile_activity_switch_instance" />
+
+                    <Button
+                        android:id="@+id/change_password"
+                        style="@style/profile_button_loggedin"
+                        android:text="@string/change_password" />
+
+                    <Button
+                        android:id="@+id/change_profile_picture"
+                        style="@style/profile_button_loggedin"
+                        android:onClick="handleChangePhotoClick"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/user_edits"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1.0" />
+            </LinearLayout>
+        </com.example.space.hkm.views.NotifyingScrollView>
+
+    </LinearLayout>
+</FrameLayout>

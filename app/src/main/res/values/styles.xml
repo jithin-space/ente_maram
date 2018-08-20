@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?><!-- Copyright 2009 Joe LaPenna -->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Widget.Design.TextInputLayout" parent="AppTheme">
+        <item name="hintTextAppearance">@style/AppTheme.TextFloatLabelAppearance</item>
+        <item name="errorTextAppearance">@style/AppTheme.TextErrorAppearance</item>
+        <item name="counterTextAppearance">@style/TextAppearance.Design.Counter</item>
+        <item name="counterOverflowTextAppearance">@style/TextAppearance.Design.Counter.Overflow</item>
+    </style>
+
+    <style name="Calendar" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/md_purple_900</item>
+        <item name="colorControlActivated">#33691e</item>
+        <!--<item name="android:selectableItemBackgroundBorderless">@color/colorPrimaryDark</item>-->
+        <item name="colorControlHighlight">#d50000</item>
+    </style>
+
+
+
+
+
+    <style name="AppTheme.TextFloatLabelAppearance" parent="TextAppearance.Design.Hint">
+        <!-- Floating label appearance here -->
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.TextErrorAppearance" parent="TextAppearance.Design.Error">
+        <!-- Error message appearance here -->
+        <item name="android:textColor">#ff0000</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="AppTheme.Launcher">
+    <item name="android:windowBackground">@drawable/branded_logo</item>
+    </style>
+
+    <!-- Allows Holo.Light.NoActionBar on SDK 10 -->
+    <style name="HoloNoTitle" parent="@style/_holo_custom">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="login_button" parent="@style/padded_full_width_button">
+        <item name="android:background">@color/secondary_button</item>
+    </style>
+
+    <style name="textbox">
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="login_textbox" parent="@style/textbox">
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="padded_full_width_button" parent="@style/full_width_button">
+        <item name="android:textColor">@color/light_text_color</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:layout_marginLeft">6dp</item>
+        <item name="android:layout_marginRight">6dp</item>
+        <item name="android:padding">@dimen/padding_12</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+    <style name="full_width_button" parent="@style/button_primary">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="button_primary">
+        <item name="android:background">@color/primary_color</item>
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+
+    <style name="register_textbox">
+        <item name="android:ems">10</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="large_label">
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:textColor">@color/md_black_1000</item>
+    </style>
+
+    <style name="general_list_row">
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="instance_switcher_element_row" parent="@style/general_list_row">
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+    <style name="general_list_row_chevron">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">20dp</item>
+    </style>
+
+    <style name="general_list_row_subtext">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="general_list_row_text" parent="@style/general_list_row_subtext">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+
+
+    <style name="instance_switcher_label" parent="@style/large_label">
+        <item name="android:padding">@dimen/padding_12</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="instance_switcher_empty_list_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <style name="register_button" parent="@style/full_width_button">
+        <item name="android:layout_marginLeft">@dimen/padding_medium</item>
+        <item name="android:layout_marginRight">@dimen/padding_medium</item>
+        <item name="android:layout_marginTop">@dimen/padding_24dp</item>
+        <item name="android:paddingBottom">@dimen/padding_small</item>
+        <item name="android:paddingTop">@dimen/padding_small</item>
+    </style>
+
+    <style name="SegmentedButtonTextAppearance">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="add_tree_label">
+        <item name="android:background">@color/main_background_color</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+    <style name="small_button_primary" >
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">2</item>
+        <item name="android:background">@color/primary_color</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">@dimen/padding_12</item>
+        <item name="android:textColor">@color/light_text_color</item>
+    </style>
+
+    <style name="plot_activity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@color/main_background_color</item>
+        <item name="android:paddingLeft">13dp</item>
+        <item name="android:paddingRight">13dp</item>
+    </style>
+
+    <style name="plot_row_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:background">@drawable/top_border</item>
+        <item name="android:paddingLeft">0dp</item>
+        <item name="android:paddingRight">0dp</item>
+    </style>
+
+    <style name="plot_row_label" parent="@style/plot_list_row">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="plot_row_value" parent="@style/plot_list_row">
+        <item name="android:textColor">@color/text_dark</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+    </style>
+
+
+
+    <style name="plot_list_row" parent="@style/general_list_row">
+        <item name="android:paddingLeft">0dp</item>
+    </style>
+
+    <style name="plot_group_label" parent="@style/plot_label">
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/secondary_color</item>
+    </style>
+
+    <style name="plot_label">
+        <item name="android:textColor">@color/text_light</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+
+    <style name="plot_edit_row_layout" parent="@style/plot_row_layout">
+    </style>
+
+
+    <style name="species_row_text" parent="@style/general_list_row_text">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="species_row_subtext" parent="@style/general_list_row_subtext">
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+
+    <style name="plot_edit_row" parent="@style/plot_row_value">
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="plot_thumbnail">
+        <item name="android:adjustViewBounds">true</item>
+        <item name="android:contentDescription">@string/tree_image</item>
+        <item name="android:maxHeight">80dp</item>
+        <item name="android:maxWidth">80dp</item>
+        <item name="android:minHeight">80dp</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+
+    <style name="small_map_label">
+        <item name="android:background">@color/text_dark</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+    </style>
+    <style name="medium_label">
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:scrollHorizontally">true</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@color/text_dark</item>
+    </style>
+
+
+    <style name="profile_button_loggedin" parent="@style/full_width_button">
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:padding">12dp</item>
+    </style>
+
+    <style name="user_profile_header">
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceMedium</item>
+        <item name="android:textColor">@color/secondary_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_gravity">top</item>
+    </style>
+
+
+
+</resources>

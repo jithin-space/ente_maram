@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+
+
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:id="@+id/radioGroup">
+
+
+            <RadioButton
+                android:id="@+id/radioButton_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/use_camera"
+                android:checked="false"
+                android:drawableEnd="@drawable/ic_cancel">
+
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioButton_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/use_gallery"
+                android:drawableEnd="@drawable/ic_cancel"
+                android:checked="false"/>
+        </RadioGroup>
+</LinearLayout>

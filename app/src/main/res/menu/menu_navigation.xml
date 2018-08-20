@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+        <item
+
+            android:icon="@drawable/ic_stars"
+            android:tint="@color/md_grey_900"
+            android:title="Tree Map" >
+            <menu>
+                <group android:checkableBehavior="single">
+                    <item
+                        android:id="@+id/current_map"
+                        android:icon="@drawable/ic_map_now"
+                        android:tint="@color/md_green_800"
+                        android:title="Now Showing.." />
+                <item
+                    android:id="@+id/switch_map"
+                    android:icon="@drawable/ic_switch"
+                    android:tint="@color/md_green_800"
+                    android:title="Switch Tree Map" />
+                </group>
+            </menu>
+
+        </item>
+
+        <item
+            android:tint="@color/md_grey_900"
+            android:title="User " >
+            <menu>
+                <group android:checkableBehavior="single" >
+
+                <item
+                    android:icon="@drawable/ic_login_password"
+                    android:id="@+id/action_profile"
+                    android:title="Change Password" />
+
+                    <item
+                        android:id="@+id/user_phone_no"
+                        android:icon="@drawable/ic_phone_locked"
+                        android:title="Phone"
+                        />
+                    <item
+                        android:icon="@drawable/ic_logout"
+                        android:id="@+id/action_logout"
+                        android:title="logout"/>
+
+                </group>
+            </menu>
+
+        </item>
+
+</menu>

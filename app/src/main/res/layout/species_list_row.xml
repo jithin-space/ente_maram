@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Base.Widget.AppCompat.ListView.DropDown"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+
+
+    <RadioButton
+        android:id="@+id/radioButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:theme="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:background="@color/md_white_1000"
+        android:buttonTint="@color/md_purple_900"
+        android:clickable="false"
+        android:focusable="false"
+       />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/common_name"
+            style="@style/TextAppearance.Compat.Notification.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_black_1000" />
+
+        <TextView
+            android:id="@+id/sci_name"
+            style="@style/TextAppearance.AppCompat.Notification.Line2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/md_grey_800" />
+    </LinearLayout>
+
+
+</LinearLayout>

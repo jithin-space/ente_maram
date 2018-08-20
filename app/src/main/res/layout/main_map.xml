@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         />
+
+
+
+    <!--<TextView-->
+        <!--android:id="@+id/filterDisplay"-->
+        <!--style="@style/small_map_label"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@color/main_background_color"-->
+        <!--android:visibility="gone" />-->
+
+
+    <RelativeLayout
+        android:id="@+id/addTreeStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/plotPopup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+
+        android:padding="10dp">
+
+        <!--<Button-->
+        <!--android:id="@+id/treeAdd"-->
+        <!--style="@style/full_width_button"-->
+        <!--android:text="ADD Tree >" />-->
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/treeAdd"
+            style="@style/Widget.Design.FloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_add_tree"
+            android:backgroundTint="@color/md_black_1000"
+            app:elevation="6dp" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/addTreeStep1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/plotPopup"
+        android:background="@color/main_background_color"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/treeAddInstructions"
+            style="@style/add_tree_label"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="@string/add_tree_step_1" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addTreeStep2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/plotPopup"
+        android:layout_alignParentTop="false"
+
+        android:background="@color/md_blue_grey_100"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:src="@drawable/ic_touch_app" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"
+            android:text="@string/add_tree_step_2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small" />
+
+        <Button
+            android:id="@+id/treeAddNext"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:backgroundTint="@color/colorPrimary"
+            android:elevation="5dp"
+            android:text="@string/add_tree_next_button"
+            android:textColor="@color/md_white_1000" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/plotPopup"
+        android:background="@color/md_blue_grey_100"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="4dp"
+        android:minHeight="110dp"
+        android:paddingLeft="10dp"
+        android:elevation="4dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/plotImage"
+            style="@style/plot_thumbnail" />
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/plotImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/plotSpecies"
+                style="@style/medium_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/species_missing" />
+
+            <TextView
+                android:id="@+id/plotAddress"
+                style="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/plotSpecies"
+                android:text="@string/no_address"
+                android:textColor="@color/md_black_1000" />
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/plotImage"
+            android:layout_below="@+id/plotImage">
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Updated:"
+                android:textColor="@color/md_black_1000" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:text="By:"
+                android:textColor="@color/md_deep_orange_A700"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/plotLastUpdate"
+                style="@style/TextAppearance.AppCompat.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Last update:"
+                android:textColor="@color/md_black_1000" />
+
+            <TextView
+                style="@style/Base.TextAppearance.AppCompat.Widget.TextView.SpinnerItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="On :"
+                android:textColor="@color/md_deep_orange_A700"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/plotLastUpdatedAt"
+                style="@style/TextAppearance.AppCompat.Notification.Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:text="Last update:"
+                android:textColor="@color/md_black_1000" />
+
+        </LinearLayout>
+
+            <ImageView
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:id="@+id/plotDismiss"
+                android:src="@drawable/ic_cancel"
+                android:text="Dismiss" />
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/basemap_controls"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addTreeStep"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        layout="@layout/segmented_button" />
+
+</RelativeLayout>

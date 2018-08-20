@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/plot_activity">
+
+        <ScrollView
+            android:id="@+id/scroller"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="@color/main_background_color" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:focusable="true"
+                android:gravity="center_vertical"
+                android:focusableInTouchMode="true" >
+                <LinearLayout
+                    android:id="@+id/field_list"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+                </LinearLayout>
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/edit_tree_picture"
+                    style="@style/Widget.Design.FloatingActionButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:src="@drawable/ic_add_photo"
+                    app:backgroundTint="@color/md_purple_900"
+                    android:layout_marginBottom="10dp"
+                    android:padding="10dp"
+                    app:elevation="6dp"
+                    android:onClick="addTreePhoto"/>
+
+                <android.support.design.widget.CoordinatorLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/coordinatorLayout"
+                    android:padding="2dp">
+
+                </android.support.design.widget.CoordinatorLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/Cancel"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/md_deep_purple_50"
+                        android:drawableLeft="@drawable/ic_cancel"
+                        android:onClick="cancel"
+                        android:text="Cancel" />
+                    <Button
+                        android:id="@+id/Save"
+                        style="@style/Widget.AppCompat.Button.Colored"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/md_deep_purple_50"
+                        android:drawableLeft="@drawable/ic_save"
+                        android:onClick="save"
+                        android:text="Save" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+

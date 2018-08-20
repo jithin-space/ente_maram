@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress AndroidDomInspection -->
+<com.example.space.hkm.ui.SegmentedButton
+    xmlns:foursquared="http://schemas.android.com/apk/res-auto"
+    foursquared:btnPaddingBottom="3dp"
+    foursquared:btnPaddingTop="3dp"
+    foursquared:cornerRadius="0dp"
+    foursquared:gradientColorOffEnd="@color/main_background_color"
+    foursquared:gradientColorOffStart="@color/main_background_color"
+    foursquared:gradientColorOnEnd="@color/no_image_background"
+    foursquared:gradientColorOnStart="@color/no_image_background"
+    foursquared:gradientColorSelectedEnd="@color/no_image_background"
+    foursquared:gradientColorSelectedStart="@color/no_image_background"
+    foursquared:strokeColor="@color/line_medium"
+    foursquared:strokeWidth="1dip"
+    foursquared:textStyle="@style/SegmentedButtonTextAppearance" />
